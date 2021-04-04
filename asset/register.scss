@@ -1,0 +1,225 @@
+$primary-color: lightblue;
+$secondary-color: blue;
+$primaryone-color: white;
+$primarytwo-color: rgb(0, 0, 0);
+$primaythree-color: #eee;
+$primaryfour-color: rgba(29, 29, 29, 0.686);
+$primaryfive-color: rgba(18, 170, 240, 0.897);
+$borderimput-color: rgba(192, 192, 192, 0.748);
+$color-black: rgb(0, 0, 0);
+
+$margin-auto: 0 auto;
+
+$font-weight-bold: bold;
+$font-weight-unset: unset;
+
+$font-size: 20px;
+
+$position: absolute;
+
+$padding-bottom: 4px;
+
+$border-none: none;
+
+%flex-prperty-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%flex-prperty-column {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+.main-bar {
+  @extend %flex-prperty-row;
+  height: 550px;
+  width: 1100px;
+  margin: $margin-auto;
+  margin-top: 60px;
+  z-index: 1;
+}
+
+.left-bar {
+  @extend %flex-prperty-column;
+  background-color: $secondary-color;
+  flex-grow: 2;
+}
+
+.right-bar {
+  background-color: $primaryone-color;
+  flex-grow: 5;
+  padding: 35px;
+  overflow-y: scroll;
+}
+.right_parent_div {
+  @extend %flex-prperty-column;
+}
+
+.reg {
+  height: 55px;
+  font-size: $font-size;
+  color: $primarytwo-color;
+}
+
+.manage {
+  font-size: $font-size;
+  font-weight: $font-weight-bold;
+  height: 65px;
+}
+
+.form {
+  @extend %flex-prperty-row;
+}
+form {
+  div {
+    height: 200px;
+    padding-right: 10px;
+    width: 50%;
+  }
+}
+.form1 {
+  @extend %flex-prperty-column;
+  padding: 8px;
+  flex-grow: 1;
+}
+
+.form2 {
+  @extend %flex-prperty-column;
+  padding: 8px;
+  flex-grow: 1;
+}
+
+.checkmark {
+  position: $position;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $primaythree-color;
+}
+
+.check {
+  padding: 15px 0 0 2px;
+  color: $primaryfour-color;
+}
+
+.form1 {
+  input {
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid $borderimput-color;
+  }
+}
+
+.form2 {
+  input {
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid $borderimput-color;
+  }
+}
+
+.form1 {
+  label {
+    padding-bottom: $padding-bottom;
+  }
+}
+.form2 {
+  label {
+    padding-bottom: $padding-bottom;
+  }
+}
+
+span {
+  color: $primaryfive-color;
+  font-weight: $font-weight-bold;
+}
+
+.btndiv {
+  margin: 58px 0 0 2px;
+  width: 400px;
+}
+
+.btn {
+  width: 150px;
+  height: 30px;
+  background-color: $secondary-color;
+  color: $primaryone-color;
+  border: $border-none;
+  border-radius: 2px;
+}
+.foot {
+  margin-top: 10px;
+  color: $color-black;
+}
+.manage {
+  div {
+    word-break: normal;
+    width: 480px;
+    font-size: 14px;
+    font-weight: $font-weight-unset;
+    color: rgba(141, 141, 141, 0.686);
+  }
+}
+
+.child_header {
+  flex-grow: 3;
+  height: 8px;
+  margin: 10px 0 0 50px;
+  font-size: 17px;
+  font-weight: $font-weight-bold;
+  color: $primaryone-color;
+}
+.child_desc {
+  flex-grow: 3;
+  margin-left: 30px;
+  font-weight: $font-weight-bold;
+}
+.child_content {
+  flex-grow: 7;
+}
+.content_box {
+  @extend %flex-prperty-row;
+  margin: 10px 0 0 30px;
+  width: 320px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(74, 182, 201);
+}
+.content_box { div {
+    width: 90px;
+    height: 90px;
+    padding: 3px;
+    border: $border-none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: rgb(10, 181, 211);
+}
+  }
+
+  .child_desc {
+    margin: $margin-auto;
+    width: 320px;
+    font-size:24px;
+    padding-top: 50px;
+    color: $primaryone-color;
+    font-weight: $font-weight-bold;
+  }
+  .absolutediv {
+    position: $position;
+    height: 140px;
+    width: 100px;
+    top: 250px;
+    left: 290px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, red , rgb(199, 24, 155));
+    color: transparent;
+  }
+
